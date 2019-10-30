@@ -1,0 +1,15 @@
+server:
+  port: 9006
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: UserWeb06
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+USERPROVIDER01:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+logging.level.com.example.userweb01: debug
